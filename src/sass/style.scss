@@ -20,6 +20,7 @@ html, body{
 	font-size: $primary-fz;
 	color: $primary-color;
 	line-height: $primary-l-heigth;
+	background-color: #000;
 }
 
 a{
@@ -45,60 +46,379 @@ input{
 		}
 }
 
-.btn{
-	text-align: center;
-	font-size: $btn-font-size;
-	color: $btn-color;
-	width: $btn-width;
-	display: block;
-	border-radius: $btn-radius;
-	padding: $btn-pd;
-	background-color: $btn-bgc;
-	border: $btn-border;
-	cursor: pointer;
-	text-transform: $btn-text-transf;
-	&:hover{
-		background-color: $btn-bgc-h;
-		color: $btn-color-h;
-	}
-}
-
-.title{
-	text-align: center;
-	text-transform: uppercase;
-	font-size: $title-font-size;
-	color: $title-color;
-
-}
-
 
 /* ==========HEADER============ */
-@import "header";
+
+.header{
+	height: 65px;
+	width: 100%;
+	margin: 0 auto;
+	background-color: rgba(0,0,0, 0.5);
+	max-width: 1900px;
+	overflow: hidden;
+	&__logo{
+		opacity: 0.5;
+		height: 64px;
+		img{
+			position: relative;
+			top: -25px;
+			animation-name: spiny;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+
+		}
+
+		span{
+			font-size: 51px;
+			position: relative;
+    	top: -71px;
+    	left: -71px;
+			font-family: "Melbourne_reg";
+			display: inline-block;
+			animation-name: spinx;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+		}
+	}
+
+	&__body{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+
+	&__nav{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+	&__item{
+		display: inline-block;
+		font-size: 24px;
+		padding-left: 30px;
+		font-family: "Melbourne_reg";
+		transition: .3s  ease-in-out; 
+
+		&:hover{
+			opacity: 0.7;
+			transform: translateY(-2px);
+
+		}
+	}
+}
+
+@keyframes spiny{
+	0%{
+		transform: translatey(-4px);
+	}
+
+	50%{
+		transform: translatey(0px);
+	}
+
+	100%{
+		transform: translatey(-4px);
+	}
+
+
+}
+
+@keyframes spinx{
+	0%{
+		transform: translateX(-4px);
+	}
+
+	50%{
+		transform: translateX(0px);
+	}
+
+	100%{
+		transform: translateX(-4px);
+	}
+
+
+}
+
+/* ==========banner============ */
+
+.banner{
+	height: 1080px;
+	padding-top: 24px;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-image: url("../img/banner.jpg"); 
+	box-sizing: border-box;
+	overflow: hidden;
+	&__body{
+		
+	}
+
+
+	
+		.left-sq{
+			width: 795px;
+			height: 795px;
+			position: absolute;
+			content: '';
+			display: block;
+			background-color: rgba(0,0,0, 0.8);
+			transform: rotate(45deg);
+			left: -610px;
+    	top: 313px;
+		}
+
+		.right-sq{
+			width: 795px;
+			height: 795px;
+			position: absolute;
+			content: '';
+			display: block;
+			background-color: rgba(0,0,0, 0.8);
+			transform: rotate(45deg);
+			right: -610px;
+    	top: 313px;
+		}
+	
+}
+
+
+/* ==========rhombus============ */
+
+.rhombus{
+	margin-top: 280px;
+	padding-left: 85px;
+	height: 588px;
+
+	&__big{
+		float: left;
+		width: 34.8%;
+		height: 414px;
+		//background-color: rgba(0,0,0, 0.7);
+		transform: rotate(45deg);
+		&:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+
+		&--left{
+			position: absolute;
+			    left: 93px;
+
+			.rhombus__small--3{
+				background-color: #000;
+				animation-name: up;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+				animation-delay: 0s;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-pack: justify;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-align-items: center;
+				align-items: center;
+
+				img{
+					transform: rotate(-46deg);
+					position: relative;
+					left: 17px;
+				}
+			} 
+
+			.rhombus__small--1{
+				background-color: #000;
+				opacity: 0.6;
+				animation-name: up;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+				animation-delay: .3s;
+			} 
+
+			.rhombus__small--4{
+				background-color: #000;
+				opacity: 0.6;
+				animation-name: up;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+				animation-delay: .3s;
+			} 
+
+			.rhombus__small--2{
+				background-color: #000;
+				opacity: 0.4;
+				
+			} 
+		}
+
+		&--center{
+			position: absolute;
+			//left: -122px;
+			    left: 32.6%;
+
+			.rhombus__small--3{
+				background-color: rgba(0,0,0, 0.6);
+				animation-name: up;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+				animation-delay: .6s;
+				
+				p{
+					transform: rotate(-45deg);
+					font-family: "Melbourne_reg";
+					font-weight: bold;
+					font-size: 47px;
+					margin-top: 21px;
+    			margin-left: 20px;
+					span{
+						display: block;
+						font-size: 15px;
+						font-family: "RobotoLight";
+						letter-spacing: 3.5px;
+						position: relative;
+						top: -28px;
+						padding-left: 3px;
+					}	
+				}
+	
+			}
+
+			.rhombus__small--1{
+				background-color: #000;
+				opacity: 0.55;
+				animation-name: up;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+				animation-delay: .9s;
+			} 
+
+			.rhombus__small--4{
+				background-color: #000;
+				opacity: 0.55;
+				animation-name: up;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+				animation-delay: .9s;
+			} 
+		}
+
+		&--right{
+			position: absolute;
+			right: 94px;
+			
+			.rhombus__small--3{
+				background-color: #000;
+				opacity: 0.45;
+
+			}
+
+			.rhombus__small--1{
+				background-color: #000;
+				opacity: 0.3;
+				animation-name: up;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+				animation-delay: 1.2s;
+			} 
+
+			.rhombus__small--4{
+				background-color: #000;
+				opacity: 0.3;
+				animation-name: up;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+				animation-delay: 1.2s;
+			} 
+
+			.rhombus__small--2{
+				background-color: #000;
+				opacity: 0.2;
+				animation-name: up;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+				animation-delay: 1.5s;
+			} 
+		}
+	}
+
+	&__small{
+		width: 50%;
+		height: 50%;
+		float: left;
+		//opacity: 0.4;
+		
+		transition: .2s ease-in-out;
+
+
+		&:hover{
+			//transform: scale(2) skewy(4deg);
+
+		}
+
+	}
+
+	&:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+}
+
+@keyframes up{
+	0%{
+		transform: scale(1) skewy(0deg);
+	}
+
+	50%{
+		transform: scale(1.05) skewy(2deg);
+	}
+
+	100%{
+		transform: scale(1) skewy(0deg);
+	}
+}
 
 /* ==========main-1============ */
-
 .main-1{
-	
+	height: 5000px;
 	&__body{
 		
 	}
-}
 
-
-/* ==========main-2============ */
-
-.main-2{
-	
-	&__body{
-		
+	.container{
+		height: 3000px;
 	}
 }
 
-/* ==========main-3============ */
-.main-3{
-	
-	&__body{
-		
+.window1{
+	width: 700px;
+	height: 700px;
+	overflow: hidden;
+	transform: rotate(45deg);
+	    position: absolute;
+    right: 0;
+    top: 300px;
+
+	img{
+	  transform: rotate(-45deg);
+	 	position: absolute;
+    top: -207px;
+    left: -252px;
 	}
 }
 
@@ -175,4 +495,3 @@ input{
 }
 
 /* ==========FOOTER============ */
-@import "footer";
