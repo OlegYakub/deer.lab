@@ -5,7 +5,7 @@
 lessFiles = ['./src/less/*.less'];
 sassFiles = ['./src/sass/*.scss', './node_modules/slick-carousel/slick/*.scss'];
 cssFiles = ['./src/css/*.css', './node_modules/jquery-modal/jquery.modal.min.css'];
-jsFiles = ['./node_modules/jquery/dist/jquery.min.js', './node_modules/slick-carousel/slick/slick.min.js', './node_modules/jquery-modal/jquery.modal.min.js', './src/js/*.js'];
+jsFiles = ['./node_modules/jquery/dist/jquery.min.js', './src/js/*.js'];
 pugFiles = ['./src/*.pug'];
 htmlFiles = ['./src/*.html'];
 imgFiles = ['./src/img/*'];
