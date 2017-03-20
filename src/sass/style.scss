@@ -54,7 +54,6 @@ input{
 	width: 100%;
 	margin: 0 auto;
 	background-color: rgba(0,0,0, 0.5);
-	max-width: 1900px;
 	overflow: hidden;
 	&__logo{
 		opacity: 0.5;
@@ -152,6 +151,7 @@ input{
 	padding-top: 24px;
 	background-repeat: no-repeat;
 	background-position: top center;
+	background-size: cover;
 	background-image: url("../img/banner.jpg"); 
 	box-sizing: border-box;
 	overflow: hidden;
@@ -395,13 +395,49 @@ input{
 
 /* ==========main-1============ */
 .main-1{
-	height: 5000px;
+	overflow: hidden;
 	&__body{
 		
 	}
 
+	.wind{
+		img{
+			//transition: .3s;
+		}
+	}
+
 	.container{
-		height: 3000px;
+		height: 1700px;
+
+	}
+
+	&__text{
+		width: 470px;
+		opacity: 0.8;
+		padding-top: 90px
+	}
+
+	&__text2{
+		width: 470px;
+		opacity: 0.8;
+		padding-top: 40px;
+
+		.main-1__deer{
+			line-height: 1.2;
+		}
+	}
+
+	&__logo{
+		padding-top: 500px;
+	}
+
+	&__deer{
+		font-family: "Melbourne_reg";
+		font-weight: bold;
+		font-size: 36px;
+		span{
+			font-family: "Melbourne_light";
+		}
 	}
 }
 
@@ -410,9 +446,13 @@ input{
 	height: 700px;
 	overflow: hidden;
 	transform: rotate(45deg);
-	    position: absolute;
-    right: 0;
-    top: 300px;
+	
+
+  &__wrapper{
+		position: absolute;
+	  right: 35px;
+	  top: 200px;
+  }
 
 	img{
 	  transform: rotate(-45deg);
@@ -420,14 +460,161 @@ input{
     top: -207px;
     left: -252px;
 	}
+
+	&__light{
+		position: absolute;
+		top: 48%;
+    left: -166px;
+		transform: rotate(-45deg);
+	}
+
+	&__light2{
+		position: absolute;
+		bottom: -179px;
+    left: 43%;
+		transform: rotate(135deg);
+	}
 }
 
-/* ==========main-4============ */
-.main-4{
+.light{
+	
+	width: 30px;
+	height: 30px;
+	&__item{
+		width: 12px;
+		height: 12px;
+		background-color: #FFF;
+		margin: 0 3px 3px 0;
+		float: left;
+
+		&:nth-child(1){
+			animation-name: light;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+			animation-delay: .2s;
+		}
+
+		&:nth-child(2){
+			animation-name: light;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+			animation-delay: .0s;
+		}
+
+		&:nth-child(3){
+			animation-name: light;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+			animation-delay: .4s;
+		}
+	}
+}
+
+@keyframes light{
+	0%{
+		opacity: 0;
+	}
+
+	50%{
+		opacity: 0.4;
+	}
+
+	100%{
+		opacity: 0;
+	}
+}
+
+.window2{
+	width: 275px;
+	height: 275px;
+	overflow: hidden;
+	transform: rotate(45deg);
+	position: absolute;
+  right: 35px;
+  top: 930px;
+  opacity: .6;
+
+	img{
+	  transform: rotate(-45deg);
+	 	position: absolute;
+    top: -145px;
+    left: -120px;
+	}
+}
+
+.window3{
+	width: 275px;
+	height: 275px;
+	overflow: hidden;
+	transform: rotate(45deg);
+	position: absolute;
+  right: 247px;
+ 	top: 1143px;
+  opacity: .3;
+
+	img{
+	  transform: rotate(-45deg);
+	 	position: absolute;
+    top: -50px;
+    left: -120px;
+	}
+}
+
+.window4{
+	width: 275px;
+	height: 275px;
+	overflow: hidden;
+	transform: rotate(45deg);
+	position: absolute;
+    right: 461px;
+    top: 1360px;
+    opacity: .1;
+
+	img{
+	  transform: rotate(-45deg);
+	 	position: absolute;
+    top: -120px;
+    left: -15px;
+	}
+}
+
+
+
+/* ==========main-2============ */
+.main-2{
 	
 	&__body{
-		
+		padding: 105px 0 170px;
+		text-align: center;
 	}	
+
+	&__title{
+		font-family: "Melbourne_reg";
+		font-weight: bold;
+		font-size: 47px;
+
+
+	}
+
+	p{
+		display: inline-block;
+	}
+
+	.light{
+		display: inline-block;
+		position: relative;
+		left: -15px;
+		top: -7px;
+		transform: rotate(-135deg);
+	}
+
+	&__text{
+		width: 550px;
+		margin: 0 auto;
+	}
 }
 
 /* ==========main-5============ */

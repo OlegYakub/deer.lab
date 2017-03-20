@@ -16,8 +16,7 @@ $(window).resize(function(){
 
 $(window).scroll(function(){
 		var st = $(this).scrollTop();
-
-		console.log(12);
+		
 		$('.left-sq').css({
 		 		"transform" : "translatex( -" + st /70 + "%) rotate(45deg)"
 		});
@@ -25,6 +24,20 @@ $(window).scroll(function(){
 		$('.right-sq').css({
 		 		"transform" : "translatex( " + st /70 + "%) rotate(45deg)"
 		});
+
+		var main1St = $('.main-1').offset().top;
+		
+		if(st >= main1St - 200){
+
+			console.log(1);
+				$('.wind img').css({
+					"transform" : "translate(-"+ (st - main1St + 200 ) /70 +"%," + (st - main1St + 200 ) /70 + "%) rotate(-45deg) "
+			});
+		}else{
+			$('.wind img').css({
+					"transform" : "translate(-0%,0%) rotate(-45deg) "
+			});
+		}
 });
 
 });
