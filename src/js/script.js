@@ -4,12 +4,12 @@
 $('.slider-for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  arrows: false,
+  arrows: true,
   fade: true,
   asNavFor: '.slider-nav'
 });
 $('.slider-nav').slick({
-  slidesToShow: 5,
+  slidesToShow: 6,
   slidesToScroll: 1,
   asNavFor: '.slider-for',
   dots: false,
