@@ -1168,11 +1168,63 @@ input{
 
 .main-7{
 	padding-top: 200px;
-
+	padding-bottom: 165px;
 	&__body{
 		display: -webkit-flex;
 		display: flex;
 	}
+
+	&__right{
+		padding-left: 125px;
+	}
+
+	&__contact{
+		margin-bottom: 20px;
+		&--phone{
+			font-size: 36px;
+			margin-top: -20px;
+		}
+
+		img{
+			padding-right: 25px;
+		}
+	}
+
+	&__logo{
+		width: 225px;
+		margin-top: 170px;
+		&--i{
+			width: 100%;
+		}
+
+		&--t{
+			width: 90px;
+			right: 6px;
+    	top: 100px;
+		}
+	}
 }
 
 /* ==========FOOTER============ */
+
+.footer{
+	display: -webkit-flex;
+	display: flex;
+	justify-content: flex-end;
+	font-size: 14px;
+	-webkit-align-items: center;
+	align-items: center;
+	padding-bottom: 50px;
+
+	&__prodused{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+		padding-left: 200px;
+	}
+
+	&__point{
+		padding-left: 25px;
+	}
+}
